@@ -1,6 +1,5 @@
 import PostDetail from "@/components/post-detail";
 import { fetchPostFromApi } from "@/lib/api-service";
-import { getCurrentProjectDomain } from "@/lib/domain-mapper";
 import { ArrowLeft, Dumbbell } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,7 +19,7 @@ export default async function PostPage({
 
   try {
     // 현재 프로젝트의 도메인 자동 감지
-    const communityUrl = "https://healthlandmark.com"; // 하드코딩된 도메인 (pbn-domains.json 기반)
+    const communityUrl = "https://lsintez.net"; // 하드코딩된 도메인 (pbn-domains.json 기반)
 
     // API에서 게시물 데이터 가져오기
     const post = await fetchPostFromApi(communityUrl, postId);
